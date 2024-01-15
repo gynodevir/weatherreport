@@ -34,10 +34,10 @@ const currentWeatherCard = (cityName, weatherItem, index) => {
     if (weatherItem.weather[0].description === "clear sky") {
         setClearSkyBackground();
     }
-    else if(weatherItem.weather[0].description=="rainy"){
+    else if(weatherItem.weather[0].description=="light rain" || weatherItem.weather[0].description=="rain"){
          Rainy();
     }
-    else if(weatherItem.weather[0].description=="snow"){
+    else if(weatherItem.weather[0].description=="snow" || weatherItem.weather[0].description=="light snow"){
         Snow()
     }
     else
