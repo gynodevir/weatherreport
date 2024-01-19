@@ -76,6 +76,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
         .then(res => res.json())
         .then(data => {
             const uniqueForecastDays = [];
+            console.log(`fivedaysBefore : ${data}`)
             const fiveDaysForecast = data.list.filter(forecast => {
                 const forecastDate = new Date(forecast.dt_txt).getDate();
                 if (!uniqueForecastDays.includes(forecastDate)) {
